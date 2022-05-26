@@ -78,7 +78,6 @@ $link-color: black;
   font: $font-stack;
   text-decoration: none;
   color: $link-color;
-  display: inline-block;
   position: relative;
   &:after {
     content: "";
@@ -195,7 +194,9 @@ $link-color: black;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     transition: 0.35s ease-out;
     p {
+      @extend %links;
       margin-bottom: 5px;
+      cursor: pointer;
     }
   }
   .dropdown-content.r {
